@@ -1,0 +1,56 @@
+using System;
+class HelloWorld
+{
+  static void Main ()
+  {
+
+    /* int idade = 12;
+
+    if (idade >= 18)
+      {
+	Console.WriteLine ("Entrada negada");
+      }
+    else
+      {
+	Console.WriteLine ("Entrada Permitida");
+      }
+
+    for (int f = 0; f < 5; f++)
+      {
+	Console.WriteLine ("nada");
+      }
+
+    var vetor = new int[]{ 1, 2, 3, 4, 5 };	
+    foreach (int elemento in vetor)
+    {
+      Console.WriteLine (elemento + " ");
+      Console.WriteLine ($ "Utilizando o simbolo $:{elemento}");	
+    } */
+    
+    //jogo da porta mágica
+    
+    int porta = 16;
+    
+    for(int time = 0; time < 15; time++){
+        
+        Console.WriteLine("Escolha uma porta de número 1 a 100"); 
+        int leitor = int.Parse(Console.ReadLine());
+     
+        if (leitor != porta){
+            Console.WriteLine("\nVocê errou, tente novamente.");
+            if (leitor > porta){
+                Console.WriteLine("\nEscreva um número menor\n");
+            }
+            else{
+                Console.WriteLine("\nEscreva um número maior\n");
+            }
+                    }
+        else{
+            Console.WriteLine("\n Você acertou.");
+            break;
+        } 
+        
+    }
+    
+  }
+}
