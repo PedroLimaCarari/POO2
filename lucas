@@ -1,0 +1,64 @@
+namespace Aula0
+{
+    internal class PopulacaoBarata
+    {
+
+        public int QtdeBaratas = 0;
+
+        public PopulacaoBarata()
+        {
+            this.QtdeBaratas = 100;
+        }
+
+        public int GetQtdeBaratas()
+        {
+            return this.QtdeBaratas;
+        }
+
+        public void Spray()
+        {
+            this.QtdeBaratas = (int)(this.QtdeBaratas * 0.9);
+        }
+
+        public void Procria()
+        {
+            this.QtdeBaratas = (int)(this.QtdeBaratas * 1.5);
+        }
+
+
+    }
+}
+
+==============================================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula0
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            PopulacaoBarata baratas = new PopulacaoBarata();
+
+            Console.WriteLine("\nA população de baratas é:\n");
+            Console.WriteLine(baratas.GetQtdeBaratas());
+
+            baratas.Spray();
+
+            Console.WriteLine("\nA população de baratas é:\n");
+            Console.WriteLine(baratas.GetQtdeBaratas());
+
+            baratas.Procria();
+
+            Console.WriteLine("\nA população de baratas é:\n");
+            Console.WriteLine(baratas.GetQtdeBaratas());
+
+
+        }
+    }
+}
